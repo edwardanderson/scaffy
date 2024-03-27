@@ -23,3 +23,5 @@ Build the example dataset as a knowledge base.
 cd scaffy/examples/kings_and_queens/
 scaffy build
 ```
+
+Explore `site/`.
