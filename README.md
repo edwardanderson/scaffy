@@ -4,20 +4,22 @@ Scaffy is a static-site knowledge base generator for [Articular](https://github.
 
 ## Install
 
+> [!WARNING]
+> Scaffy is an on-going research project and is not yet ready for use in production.
+
 ```bash
-pip install scaffy
+git clone https://github.com/edwardanderson/scaffy.git
+cd scaffy/
+python3.10 -m venv .venv
+source .venv/bin/activate
+pip install --editable .
 ```
 
 ## Quickstart
 
-```bash
-scaffy init
-```
+Build the example dataset as a knowledge base.
 
 ```bash
+cd scaffy/examples/kings_and_queens/
 scaffy build
-```
-
-```bash
-scaffy serve
 ```
