@@ -1,0 +1,52 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Dataset</h1>
+        <table>
+            <thead>
+                <tr>
+                  <th scope="col">Source</th>
+                  <th scope="col">Triples</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%- for file, count in summary.items() -%}
+                <tr>
+                    <td><a href="{{ file }}">{{ file }}</a></td>
+                    <td>{{ count }}</td>
+                </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+        <h2>Query</h2>
+        <table>
+            <thead>
+                <tr>
+                  <th scope="col">Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%- for query in queries -%}
+                <tr>
+                    <td><a href="../query/{{ query }}">{{ query }}</a></td>
+                </tr>
+                {%- endfor -%}
+            </tbody>
+        </table>
+        <footer>
+            <hr>
+            <h2>Data</h2>
+            <ul>
+                <li><a href="../data/dataset.nq">application/n-quads</a></li>
+                <li><a href="../data/dataset.trig">application/trig</a></li>
+            </ul>
+        </footer>
+    </main>
+</body>
+
+</html>

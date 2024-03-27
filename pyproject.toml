@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 66.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+version = "0.1.0"
+name = "Scaffy"
+description = "Static knowledge base generator for Articular."
+keywords = [
+    "Articular",
+    "Knowledge graphs",
+    "Markdown",
+    "RDF"
+]
+readme = 'README.md'
+urls = { project-url = "https://github.com/edwardanderson/scaffy" }
+dependencies = [
+    "articular@git+https://github.com/edwardanderson/articular.git",
+    "jinja2",
+    "tqdm",
+    "beautifulsoup4",
+    "typer"
+]
+
+[tool.setuptools.packages.find]
+
+[project.scripts]
+scaffy = "scaffy.cli:app"

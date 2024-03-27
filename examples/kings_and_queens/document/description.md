@@ -1,0 +1,183 @@
+---
+glossary: identity.md
+language: en
+---
+
+- Alfred the Great
+  - birth date
+    - > 0849 `date`
+  - death date
+    - > 0899-10-26 `date`
+  - portrait
+    - ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Alfred_-_MS_Royal_14_B_VI.jpg/150px-Alfred_-_MS_Royal_14_B_VI.jpg)
+  - gender
+    - male
+- Edward the Elder
+  - death date
+    - > 0924-07-17 `date`
+  - spouse
+    1. [Ecgwynn](http://www.wikidata.org/entity/Q3499686)
+    2. Ælfflæd
+    3. Eadgifu of Kent
+  - gender
+    - male
+- Æthelstan
+  - death date
+    - > 0939-10-27 `date`
+  - gender
+    - male
+- Edmund I
+  - gender
+    - male
+- Eadred
+  - gender
+    - male
+- Eadwig
+  - gender
+    - male
+- Edgar the Peaceful
+  - gender
+    - male
+- Edward the Martyr
+  - gender
+    - male
+- Æthelred the Unready
+  - gender
+    - male
+- Sweyn
+  - gender
+    - male
+- Æthelred the Unready
+  - gender
+    - male
+- Edmund Ironside
+  - gender
+    - male
+- Cnut
+  - gender
+    - male
+- Harold Harefoot
+  - gender
+    - male
+- Harthacnut
+  - gender
+    - male
+- Edward the Confessor
+  - gender
+    - male
+- Harold II
+  - gender
+    - male
+- William I
+  - gender
+    - male
+- William II
+  - gender
+    - male
+- Henry I
+  - gender
+    - male
+- Stephen
+  - gender
+    - male
+- Henry II
+  - gender
+    - male
+- Richard I
+  - gender
+    - male
+- John
+  - gender
+    - male
+- Henry III
+  - gender
+    - male
+- Edward I
+  - gender
+    - male
+- Edward II
+  - gender
+    - male
+- Edward III
+  - gender
+    - male
+- Richard II
+  - gender
+    - male
+- Henry IV
+  - gender
+    - male
+- Henry V
+  - gender
+    - male
+- Henry VI
+  - gender
+    - male
+- Edward IV
+  - gender
+    - male
+- Henry VI
+  - gender
+    - male
+- Edward IV
+  - gender
+    - male
+- Edward V
+  - gender
+    - male
+- Richard III
+  - gender
+    - male
+- Henry VII
+  - gender
+    - male
+- Henry VIII
+  - gender
+    - male
+- Edward VI
+  - gender
+    - male
+- Mary I
+  - gender
+    - female
+- Philip
+  - gender
+    - male
+- Elizabeth I
+  - gender
+    - female
+- James I
+  - gender
+    - male
+- Charles I
+  - gender
+    - male
+- Oliver Cromwell
+  - gender
+    - male
+- Richard Cromwell
+  - gender
+    - male
+- Charles II
+  - gender
+    - male
+- James II
+  - gender
+    - male
+- Mary II
+  - gender
+    - female
+- William III
+  - gender
+    - male
+- Anne
+  - gender
+    - female
+
+---
+
+male
+: <https://schema.org/Male>
+
+female
+: <https://schema.org/Female>

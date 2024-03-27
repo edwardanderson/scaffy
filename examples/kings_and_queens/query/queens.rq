@@ -1,0 +1,11 @@
+prefix : <http://example.org/terms/>
+prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix schema: <https://schema.org/>
+
+select ?person ?label
+where {
+    graph ?g {
+        ?person :gender schema:Female ;
+            rdfs:label ?label .
+    }
+}

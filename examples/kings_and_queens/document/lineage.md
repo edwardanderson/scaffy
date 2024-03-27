@@ -1,0 +1,202 @@
+---
+glossary: identity.md
+---
+
+- Alfred the Great
+  - parent
+    - [Æthelwulf of Wessex](http://www.wikidata.org/entity/Q272326)
+    - [Osburh](http://www.wikidata.org/entity/Q2296250)
+- Edward the Elder
+  - parent
+    - Alfred the Great
+    - [Ealhswith](http://www.wikidata.org/entity/Q242670)
+- Æthelstan
+  - parent
+    - Edward the Elder
+    - [Ecgwynn](http://www.wikidata.org/entity/Q3499686)
+- Edmund I
+  - parent
+    - Edward the Elder
+    - [Eadgifu of Kent](http://www.wikidata.org/entity/Q3433685)
+- Eadred
+  - parent
+    - Edward the Elder
+    - [Eadgifu of Kent](http://www.wikidata.org/entity/Q3433685)
+- Eadwig
+  - parent
+    - Edmund I
+    - [Ælfgifu of Shaftesbury](http://www.wikidata.org/entity/Q2278338)
+- Edgar the Peaceful
+  - parent
+    - Edmund I
+    - [Ælfgifu of Shaftesbury](http://www.wikidata.org/entity/Q2278338)
+- Edward the Martyr
+  - parent
+    - Edgar the Peaceful
+    - [Æthelflæd](http://www.wikidata.org/entity/Q5850040)
+- Æthelred the Unready
+  - parent
+    - Edgar the Peaceful
+    - [Ælfthryth](http://www.wikidata.org/entity/Q2746341)
+- Sweyn
+  - parent
+    - [Harald Bluetooth](http://www.wikidata.org/entity/Q201041)
+  - possible parent
+    - Tove
+    - Gunhild
+- Edmund Ironside
+  - parent
+    - Æthelred the Unready
+    - Ælfgifu of York
+- Cnut
+  - parent
+    - Sweyn
+    - Gunhilda of Poland
+- Harold Harefoot
+  - parent
+    - Cnut
+    - Ælfgifu of Northampton
+- Harthacnut
+  - parent
+    - Cnut
+    - Emma of Normandy
+- Edward the Confessor
+  - parent
+    - Æthelred the Unready
+    - Emma of Normandy
+- Harold II
+  - parent
+    - Godwin of Wessex
+    - Gytha Thorkelsdóttir
+- William I
+  - parent
+    - Robert the Magnificent
+    - Herleva
+- William II
+  - parent
+    - William I
+    - Matilda of Flanders
+- Henry I
+  - parent
+    - William I
+    - Matilda of Flanders 
+- Stephen
+  - parent
+    - Stephen II of Blois
+    - Adela of Normandy
+- Henry II
+  - parent
+    - Geoffrey V of Anjou
+    - Matilda
+- Richard I
+  - parent
+    - Henry II
+    - Eleanor of Aquitaine
+- John
+  - parent
+    - Henry II
+    - Eleanor of Aquitaine
+- Henry III
+  - parent
+    - John
+    - Isabella of Angoulême
+- Edward I
+  - parent
+    - Henry III
+    - Eleanor of Provence
+- Edward II
+  - parent
+    - Edward I
+    - Eleanor of Castile
+- Edward III
+  - parent
+    - Edward II
+    - Isabella of France
+- Richard II
+  - parent
+    - Edward the Black Prince
+    - Joan of Kent
+- Henry IV
+  - parent
+    - John of Gaunt
+    - Blanche of Lancaster
+- Henry V
+  - parent
+    - Henry IV
+    - Mary de Bohun
+- Henry VI
+  - parent
+    - Henry V
+    - Catherine of Valois
+- Edward IV
+  - parent
+    - Richard of York
+    - Cecily Neville
+- Edward V
+  - parent
+    - Edward IV
+    - Elizabeth Woodville
+- Richard III
+  - parent
+    - Richard of York
+    - Cecily Neville
+- Henry VII
+  - parent
+    - Edmund Tudor
+    - Margaret Beaufort
+- Henry VIII
+  - parent
+    - Henry VII
+    - Elizabeth of York
+- Edward VI
+  - parent
+    - Henry VIII
+    - Jane Seymour
+- Mary I
+  - parent
+    - Henry VIII
+    - Catherine of Aragon
+- Philip
+  - parent
+    - Charles V of the Holy Roman Empire
+    - Isabella of Portugal
+- Elizabeth I
+  - parent
+    - Henry VIII
+    - Anne Boleyn
+- James I
+  - parent
+    - Mary Queen of Scots
+    - Henry Stuart, Lord Darnley
+- Charles I
+  - parent
+    - James I
+    - Anne of Denmark
+- Oliver Cromwell
+  - parent
+    - Robert Cromwell
+    - Elizabeth Steward
+- Richard Cromwell
+  - parent
+    - Oliver Cromwell
+    - Elizabeth Bourchier
+- Charles II
+  - parent
+    - Charles I
+    - Henrietta Maria of France
+- James II
+  - parent
+    - Charles I
+    - Henrietta Maria of France 
+- Mary II
+  - parent
+    - James II
+    - Anne Hyde
+- William III
+  - parent
+    - William II of Orange
+    - Mary of England
+- Anne
+  - parent
+    - James II
+    - Anne Hyde

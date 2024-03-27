@@ -1,0 +1,121 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+</head>
+
+<body>
+    <main class="container">
+        {%- if title -%}
+        <h2>{{- title -}}</h2>
+        {%- endif -%}
+        <ul>{%- for item in graph recursive -%}
+            {%- set outer_loop = loop -%}
+            <li>
+                {%- set id = item['@id'] %}
+                {%- set type = item['@type'] %}
+                {%- set label = item['_label'] or '' %}
+                {%- if item['_label'] is mapping -%}
+                    {%- set label_language = item['_label']['@language'] %}
+                    {%- set label = item['_label']['@value'] %}
+                {%- else %}
+                    {%- set label = item['_label'] %}
+                {%- endif -%}
+                {%- if id and not id.startswith('_:') -%}
+                    {%- if type == '_Image' -%}
+                        <figure>
+                            <img src="{{ id }}"
+                            {%if label %}
+                                alt="{{ label }}"
+                            {% endif %}
+                            >
+                            <figcaption>
+                                {%- if label -%}
+                                    {{ label -}}
+                                {% endif %}
+                                {%- if label_language -%}&nbsp;
+                                <code><small>{{ label_language }}</small></code>
+                                {%- endif -%}
+                            </figcaption>
+                        </figure>
+                    {%- else -%}
+                        <a href="{{- id -}}">
+                            {%- if label -%}
+                                {{- label -}}
+                            {%- endif -%}
+                        </a>
+                        {%- if label_language -%}&nbsp;
+                            <code><small>{{ label_language -}}</small></code>
+                        {%- endif %}
+                        {% for file in references %}
+                            {% if id in references[file] %}
+                                {% set requires_references = True %}
+                                <sup><small><a href="#footnote-{{ loop.index }}">{{ loop.index }}</a></small></sup>
+                            {% endif %}
+                        {% endfor %}
+                    {%- endif -%}
+                {%- else -%}
+                    {%- if label -%}
+                        {{ label -}}
+                    {% endif %}
+                    {%- if label_language -%}&nbsp;
+                        <code><small>{{ label_language }}</small></code>
+                    {%- endif -%}
+                {%- endif -%}
+                {%- if type == '_Text' -%}
+                <blockquote>
+                    {{ item['_content'][0]['@value']|safe }}
+                </blockquote>
+                {%- endif -%}
+                {%- if item is mapping -%}
+                    {%- for key, value in item.items() recursive -%}
+                        {%- if key not in ['@id', '@type', '@language', '@list', '@value', '_content', '_label', '_seeAlso'] -%}
+                        <ul>
+                            <li>{{- key -}}
+                                {%- if '@list' not in value -%}
+                                    <ul>
+                                        {{- outer_loop(value) -}}
+                                    </ul>
+                                {%- else -%}
+                                    <ol type="1">
+                                        {{- outer_loop(value['@list']) -}}
+                                    </ol>
+                                {%- endif -%}
+                            </li>
+                        </ul>
+                        {% elif key == '@value' %}
+                            <blockquote>{{ item['@value'] }}
+                            {% if type %}
+                                <code><small>{{ type }}</small></code>
+                            {% elif item['@language'] %}
+                                <code><small>{{ item['@language'] }}</small></code>
+                            {% endif %}
+                            </blockquote>
+                        {%- endif -%}
+                    {%- endfor -%}
+                {%- endif -%}
+             </li>
+            {%- endfor -%}
+        </ul>
+        <footer>
+            {% if references %}
+            <hr>
+            <h2>References</h2>
+                {% for file in references %}
+                    <p id="footnote-{{ loop.index }}"><sup>{{ loop.index }}</sup>. <a href="{{ file }} ">{{ file }}</a></p>
+                {% endfor %}
+            {% endif %}
+            {% if representations %}
+            <hr>
+            <h2>Data</h2>
+            <ul>
+                {% for path, format in representations.items() %}
+                <li><a href="../../{{ path }}">{{ format }}</a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </footer>
+    </main>
+</body>
+
+</html>
