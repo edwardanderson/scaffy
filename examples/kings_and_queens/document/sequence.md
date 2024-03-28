@@ -1,6 +1,9 @@
 ---
 glossary: identity.md
+metadata: true
 ---
+
+# Sequence
 
 - Kings & Queens of England
   - member

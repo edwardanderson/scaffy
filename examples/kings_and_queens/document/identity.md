@@ -1,3 +1,9 @@
+---
+metadata: true
+---
+
+# Identity
+
 Alfred the Great
 : <http://www.wikidata.org/entity/Q83476>
 
