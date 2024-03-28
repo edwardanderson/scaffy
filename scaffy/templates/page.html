@@ -24,11 +24,7 @@
                 {%- if id and not id.startswith('_:') -%}
                     {%- if type == '_Image' -%}
                         <figure>
-                            <img src="{{ id }}"
-                            {%if label %}
-                                alt="{{ label }}"
-                            {% endif %}
-                            >
+                            <img src="{{ id }}" {%if label %} alt="{{ label }}" {% endif %}>
                             <figcaption>
                                 {%- if label -%}
                                     {{ label -}}

@@ -1,6 +1,6 @@
 # Scaffy
 
-Scaffy is a static-site knowledge base generator for [Articular](https://github.com/edwardanderson/articular).
+Scaffy is a static site knowledge base generator for [Articular](https://github.com/edwardanderson/articular).
 
 ## Install
 

@@ -1,7 +1,10 @@
 ---
 glossary: identity.md
 language: en
+metadata: true
 ---
+
+# Description
 
 - Alfred the Great
   - birth date
@@ -9,7 +12,7 @@ language: en
   - death date
     - > 0899-10-26 `date`
   - portrait
-    - ![](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Alfred_-_MS_Royal_14_B_VI.jpg/150px-Alfred_-_MS_Royal_14_B_VI.jpg)
+    - ![Miniature d'Alfred le Grand dans une généalogie royale du XIVe siècle.](https://upload.wikimedia.org/wikipedia/commons/6/6d/Alfred_-_MS_Royal_14_B_VI.jpg) `fr`
   - gender
     - male
 - Edward the Elder

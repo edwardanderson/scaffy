@@ -3,14 +3,15 @@ requires = ["setuptools >= 66.0.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-version = "0.1.0"
+version = "0.1.1"
 name = "Scaffy"
-description = "Static knowledge base generator for Articular."
+description = "Static site knowledge base generator for Articular."
 keywords = [
     "Articular",
     "Knowledge graphs",
     "Markdown",
-    "RDF"
+    "RDF",
+    "Static site generator"
 ]
 readme = 'README.md'
 urls = { project-url = "https://github.com/edwardanderson/scaffy" }

@@ -1,7 +1,6 @@
+from articular import ArticularResultDocument
 from bs4 import BeautifulSoup
 from jinja2 import Environment, PackageLoader, select_autoescape
-
-from articular import ArticularResultDocument
 
 
 env = Environment(
@@ -14,12 +13,20 @@ env = Environment(
 
 class ScaffyBase:
 
+    def __init__(self, template_path: str) -> None:
+        self._pretty_html = None
+        self._soup = None
+        self._template = env.get_template(template_path)
+
     def __str__(self) -> str:
         return self.result
 
     @property
     def html(self) -> str:
-        return self.soup.prettify()
+        if not self._pretty_html:
+            self._pretty_html = self.soup.prettify()
+
+        return self._pretty_html
 
     @property
     def soup(self) -> BeautifulSoup:
@@ -28,38 +35,32 @@ class ScaffyBase:
 
         return self._soup
 
+    def render(self, **kwargs) -> str:
+        return self._template.render(**kwargs)
+
 
 class ScaffyDataset(ScaffyBase):
 
-    _template = env.get_template('dataset.html')
-
     def __init__(self, summary, queries):
-        self._soup = None
-        self.result = ScaffyDataset._template.render(summary=summary, queries=queries)
+        super().__init__('dataset.html')
+        self.result = self.render(summary=summary, queries=queries)
 
 
 class ScaffyQuery(ScaffyBase):
 
-    _template = env.get_template('query.html')
-
     def __init__(self, title: str, result):
-        self._soup = None
-        self.result = ScaffyQuery._template.render(title=title, result=result)
+        super().__init__('query.html')
+        self.result = self.render(title=title, result=result)
 
 
 class ScaffyDocument(ScaffyBase):
 
-    _template = env.get_template('page.html')
-
     def __init__(self, document: ArticularResultDocument, representations: list | None, references: dict = None) -> None:
+        super().__init__('page.html')
         self.document = document
-        title = document.json.get('@id')
-        self.graph = document.json.get('@graph', [])
-        self.result = ScaffyDocument._template.render(
-            title=title,
-            graph=self.graph,
+        self.result = self.render(
+            title=document.json.get('_title'),
+            graph=document.json.get('@graph', []),
             representations=representations,
             references=references
         )
-        self._soup = None
-

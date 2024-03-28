@@ -1,6 +1,9 @@
 ---
 glossary: identity.md
+metadata: true
 ---
+
+# Lineage
 
 - Alfred the Great
   - parent
